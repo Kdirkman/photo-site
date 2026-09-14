@@ -4,8 +4,9 @@
   --text: #ededed;
   --text-dim: #9a9a9f;
   --accent: #ededed;
-  --gap: 4px;
+  --gap: 10px;
   --max-width: 1400px;
+  --font-serif: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
 }
 
 * {
@@ -39,9 +40,10 @@ a {
 }
 
 .site-title {
-  font-size: 1.1rem;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   text-decoration: none;
 }
 
@@ -49,7 +51,9 @@ a {
   margin-left: 1.5rem;
   text-decoration: none;
   color: var(--text-dim);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   transition: color 0.15s ease;
 }
 
@@ -64,9 +68,8 @@ a {
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: var(--gap);
+  columns: 4 280px;
+  column-gap: var(--gap);
 }
 
 .gallery-item {
@@ -74,13 +77,13 @@ a {
   overflow: hidden;
   background: var(--bg-elevated);
   cursor: pointer;
-  aspect-ratio: 1 / 1;
+  margin-bottom: var(--gap);
+  break-inside: avoid;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
   opacity: 0;
   transition: opacity 0.35s ease, transform 0.35s ease;
@@ -107,7 +110,9 @@ a {
 }
 
 .about-section h2 {
-  font-size: 1.4rem;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
@@ -199,7 +204,7 @@ a {
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    columns: 2 140px;
   }
 
   .lightbox-prev,
