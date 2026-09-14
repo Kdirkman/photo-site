@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kris | Photography</title>
+  <meta name="description" content="Photography portfolio by Kris." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="#top">Kris</a>
+    <nav class="site-nav">
+      <a href="#gallery">Work</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section id="gallery" class="gallery-section">
+      <div id="gallery-grid" class="gallery-grid" aria-live="polite">
+        <!-- Populated by js/main.js from gallery.json -->
+      </div>
+      <p id="gallery-empty" class="gallery-empty" hidden>
+        No photos yet. Drop images into <code>/images</code> and run <code>npm run build</code>.
+      </p>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2>About</h2>
+      <p class="bio">
+        I'm Kris, an outdoor photographer drawn to trails, rivers, and the wildlife that shows up
+        along the way &mdash; bald eagles, quiet backroads, and whatever light happens to be worth
+        stopping for. Most of these were shot on rides and hikes rather than planned outings.
+      </p>
+      <p class="contact">
+        Get in touch: <a href="mailto:kdirkman@gmail.com">kdirkman@gmail.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Kris</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous photo">&#8249;</button>
+    <img id="lightbox-image" class="lightbox-image" src="" alt="" />
+    <button class="lightbox-next" aria-label="Next photo">&#8250;</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

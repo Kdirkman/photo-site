@@ -1,0 +1,13 @@
+{
+  "name": "photo-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static photo portfolio site with an auto-generated gallery",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "serve": "npx --yes serve dist -l 5000"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4"
+  }
+}
